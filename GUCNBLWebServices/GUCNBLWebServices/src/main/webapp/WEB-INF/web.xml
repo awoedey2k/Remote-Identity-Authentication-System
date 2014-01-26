@@ -1,0 +1,111 @@
+<web-app id="WebApp_ID" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>Restful Web Application</display-name>
+
+	<servlet>
+		<servlet-name>jersey-serlvet</servlet-name>
+		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>com.sun.jersey.config.property.packages</param-name>
+			<param-value>GUC.NBL.WebServices</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+		
+	</servlet>
+	
+	<servlet>
+		<description>
+		JAX-RS Tools Generated - Do not modify</description>
+		<servlet-name>JAX-RS Servlet</servlet-name>
+		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JAX-RS Servlet</servlet-name>
+		<url-pattern>/jaxrs/*</url-pattern>
+	</servlet-mapping>
+
+<listener>
+    <listener-class>GUC.NBL.RemoteClient.ApiKeyInitializer</listener-class>
+    </listener>
+   
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>GUC.NBL.RemoteClient.RegisterServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UnregisterServlet</servlet-name>
+    <servlet-class>GUC.NBL.RemoteClient.UnregisterServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UnregisterServlet</servlet-name>
+    <url-pattern>/unregister</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SendAllMessagesServlet</servlet-name>
+    <servlet-class>GUC.NBL.RemoteClient.SendAllMessagesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SendAllMessagesServlet</servlet-name>
+    <url-pattern>/sendAll</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HomeServlet</servlet-name>
+    <servlet-class>GUC.NBL.RemoteClient.HomeServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HomeServlet</servlet-name>
+    <url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  
+   <listener>
+    <listener-class>GUC.NBL.ControlClient.ApiKeyInitializer</listener-class>
+  </listener>
+  <servlet>
+    <servlet-name>RegisterServlet2</servlet-name>
+    <servlet-class>GUC.NBL.ControlClient.RegisterServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet2</servlet-name>
+    <url-pattern>/register2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UnregisterServlet2</servlet-name>
+    <servlet-class>GUC.NBL.ControlClient.UnregisterServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UnregisterServlet2</servlet-name>
+    <url-pattern>/unregister2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SendAllMessagesServlet2</servlet-name>
+    <servlet-class>GUC.NBL.ControlClient.SendAllMessagesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SendAllMessagesServlet2</servlet-name>
+    <url-pattern>/sendAll2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HomeServlet2</servlet-name>
+    <servlet-class>GUC.NBL.ControlClient.HomeServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HomeServlet2</servlet-name>
+    <url-pattern>/home2</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
