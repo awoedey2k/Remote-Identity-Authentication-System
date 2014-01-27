@@ -1,4 +1,10 @@
 Remote-Identity-Authentication-System
 =====================================
 
-This is a Remote Identity Authentication System developed for the Norwegian Security Laboratory/ Norwegian Biometrics Laboratory. Including a control client to send the command for capturing the fingerprint. A capture client used to capture the fingerprint. And a REST style server used to provide a service for communication between control client and capture client
+Developing Tools: Eclipse, Maven 3.0.1, Tomcat 6.0, Jersey 1.9
+
+
+Programming Language: Android Application: java; Restful Server: Java
+
+
+Project Description: This  Project was developed by 2 people, containing two android clients, one is control client used for sending capture command to another, another one is used for capture the fingerprint;  Restful Server provides the communication service between two android clients.  Control client sends notification to capture client, capture take the fingerprint and return to the Control client.
